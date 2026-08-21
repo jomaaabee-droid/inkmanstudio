@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inkman Studio – Tattoo Jönköping</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ========== HERO VIDEO ========== -->
+  <section class="hero" id="hem">
+    <video class="hero__video" autoplay muted loop playsinline>
+      <!-- Lägg till video: assets/video/hero.mp4 -->
+      <source src="assets/video/hero.mp4" type="video/mp4" />
+    </video>
+    <div class="hero__overlay">
+      <img src="assets/images/logo.jpg" alt="Inkman Studio" class="hero__logo" />
+      <p class="hero__tagline">Tattoo Studio – Jönköping</p>
+    </div>
+  </section>
+
+  <!-- ========== NAVIGATIONSBAR ========== -->
+  <nav class="navbar" id="navbar">
+    <div class="navbar__inner">
+
+      <div class="navbar__item dropdown">
+        <button class="navbar__btn">
+          <span class="navbar__arrow">↓</span> Tattoos
+        </button>
+        <div class="dropdown__menu">
+          <a href="#tattoos-flash">Flash</a>
+          <a href="#tattoos-text">Text</a>
+          <a href="#tattoos-bng">Black n Grey</a>
+          <a href="#tattoos-sleeve">Sleeve</a>
+          <a href="#tattoos-color">Color Tattoo</a>
+          <a href="#tattoos-rygg">Ryggtavla</a>
+          <a href="#tattoos-ben">Ben Sleeve</a>
+        </div>
+      </div>
+
+      <div class="navbar__item dropdown">
+        <button class="navbar__btn">
+          <span class="navbar__arrow">↓</span> Konsultation
+        </button>
+        <div class="dropdown__menu">
+          <a href="#konsultation">Boka konsultation</a>
+          <a href="#konsultation">Vad händer vid konsultation?</a>
+          <a href="#konsultation">Priser & info</a>
+        </div>
+      </div>
+
+      <div class="navbar__item dropdown">
+        <button class="navbar__btn">
+          <span class="navbar__arrow">↓</span> Öppettider
+        </button>
+        <div class="dropdown__menu">
+          <a href="#oppettider">Måndag–Fredag</a>
+          <a href="#oppettider">Lördag</a>
+          <a href="#oppettider">Söndag</a>
+        </div>
+      </div>
+
+      <div class="navbar__item">
+        <a href="#bokning" class="navbar__btn navbar__btn--highlight">Bokning</a>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main class="main-layout">
+
+    <!-- Vänster sidomeny – Tatueringsstilar -->
+    <aside class="sidebar" id="tattoos">
+      <h3 class="sidebar__title">Stilar</h3>
+      <ul class="sidebar__list">
+        <li><a href="#tattoos-flash" class="sidebar__link" id="tattoos-flash">Flash</a></li>
+        <li><a href="#tattoos-text" class="sidebar__link" id="tattoos-text">Text</a></li>
+        <li><a href="#tattoos-bng" class="sidebar__link" id="tattoos-bng">Black n Grey</a></li>
+        <li><a href="#tattoos-sleeve" class="sidebar__link" id="tattoos-sleeve">Sleeve</a></li>
+        <li><a href="#tattoos-color" class="sidebar__link" id="tattoos-color">Color Tattoo</a></li>
+        <li><a href="#tattoos-rygg" class="sidebar__link" id="tattoos-rygg">Ryggtavla</a></li>
+        <li><a href="#tattoos-ben" class="sidebar__link" id="tattoos-ben">Ben Sleeve</a></li>
+      </ul>
+    </aside>
+
+    <!-- Mitten – Logga + Sektioner -->
+    <div class="content">
+
+      <!-- Logga/maskot i centrum -->
+      <section class="center-hero">
+        <img src="assets/images/logo.jpg" alt="Inkman Studio Maskot" class="center-hero__img" />
+      </section>
+
+      <!-- Konsultation -->
+      <section class="section" id="konsultation">
+        <h2 class="section__title">Konsultation</h2>
+        <div class="section__body">
+          <p>Innan vi börjar tatueringen erbjuder vi en kostnadsfri konsultation. Vi går igenom dina idéer, placering, storlek och stil tillsammans för att hitta det perfekta designen för dig.</p>
+          <p>Hör av dig via Instagram eller mail så bokar vi ett möte som passar.</p>
+          <a href="https://www.instagram.com/emranoart" target="_blank" class="btn btn--primary">Kontakta oss på Instagram</a>
+        </div>
+      </section>
+
+      <!-- Öppettider -->
+      <section class="section" id="oppettider">
+        <h2 class="section__title">Öppettider</h2>
+        <div class="section__body">
+          <table class="hours-table">
+            <tbody>
+              <tr><td>Måndag – Fredag</td><td>10:00 – 18:00</td></tr>
+              <tr><td>Lördag</td><td>11:00 – 16:00</td></tr>
+              <tr><td>Söndag</td><td>Stängt</td></tr>
+            </tbody>
+          </table>
+          <p class="hours-note">* Tider kan variera. Kontakta oss för att bekräfta.</p>
+        </div>
+      </section>
+
+      <!-- Bokning -->
+      <section class="section" id="bokning">
+        <h2 class="section__title">Bokning</h2>
+        <div class="section__body booking-info">
+
+          <div class="booking-card">
+            <span class="booking-card__icon">📩</span>
+            <h3>Hur bokar du?</h3>
+            <p>Hör av dig till oss via Instagram DM eller e-post med dina önskemål. Berätta om placering, ungefärlig storlek och stil.</p>
+            <a href="https://www.instagram.com/emranoart" target="_blank" class="btn btn--primary">Instagram – @emranoart</a>
+          </div>
+
+          <div class="booking-card">
+            <span class="booking-card__icon">🖼️</span>
+            <h3>Vad behöver du ha med dig?</h3>
+            <ul>
+              <li>Referensbilder på design du gillar</li>
+              <li>Information om placering på kroppen</li>
+              <li>Ungefärlig storlek</li>
+              <li>Eventuella idéer eller text du vill ha med</li>
+            </ul>
+          </div>
+
+          <div class="booking-card">
+            <span class="booking-card__icon">💳</span>
+            <h3>Deposition</h3>
+            <p>Vi tar en deposition vid bokning som dras av från slutpriset. Depositionen är icke-återbetalningsbar vid sen avbokning.</p>
+            <p>Betalning sker via <strong>Klarna</strong> eller kontant.</p>
+          </div>
+
+          <div class="booking-card">
+            <span class="booking-card__icon">ℹ️</span>
+            <h3>Bra att veta</h3>
+            <ul>
+              <li>Kom utvilad och ätit innan sessionen</li>
+              <li>Bär bekväma kläder som ger åtkomst till tatueringsytan</li>
+              <li>Ingen alkohol 24h innan</li>
+              <li>Minderåriga tatuereras ej</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Instagram Feed -->
+      <section class="section" id="instagram">
+        <h2 class="section__title">Senaste från Instagram</h2>
+        <div class="instagram-grid" id="instagram-grid">
+          <!-- Fylls dynamiskt via script.js när API-nyckel finns -->
+          <div class="instagram-placeholder">
+            <p>Följ oss på Instagram för senaste arbeten</p>
+            <a href="https://www.instagram.com/emranoart" target="_blank" class="btn btn--instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              @emranoart
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer" id="kontakt">
+    <div class="footer__inner">
+
+      <!-- Instagram -->
+      <div class="footer__col footer__col--instagram">
+        <a href="https://www.instagram.com/emranoart" target="_blank" class="footer__ig-link" aria-label="Inkman Studio på Instagram">
+          <svg class="footer__ig-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="url(#igGradient)">
+            <defs>
+              <linearGradient id="igGradient" x1="0%" y1="100%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="#f09433"/>
+                <stop offset="25%" stop-color="#e6683c"/>
+                <stop offset="50%" stop-color="#dc2743"/>
+                <stop offset="75%" stop-color="#cc2366"/>
+                <stop offset="100%" stop-color="#bc1888"/>
+              </linearGradient>
+            </defs>
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+          </svg>
+          <span>Inkman Studio</span>
+          <span class="footer__ig-handle">@emranoart</span>
+        </a>
+      </div>
+
+      <!-- Klarna -->
+      <div class="footer__col footer__col--klarna">
+        <p class="footer__label">Betalning</p>
+        <a href="https://www.klarna.com" target="_blank" class="footer__klarna-link" aria-label="Betala med Klarna">
+          <div class="footer__klarna-badge">Klarna.</div>
+        </a>
+        <p class="footer__sub">Delbetala din tatuering</p>
+      </div>
+
+      <!-- Adress + Karta -->
+      <div class="footer__col footer__col--address">
+        <img src="assets/images/logo.jpg" alt="Inkman Studio" class="footer__logo" />
+        <div class="footer__contact">
+          <p>📍 Trägårdsgatan 23, Jönköping</p>
+          <p>📸 <a href="https://www.instagram.com/emranoart" target="_blank">@emranoart</a></p>
+        </div>
+        <a href="https://maps.google.com/?q=Trägårdsgatan+23,+Jönköping" target="_blank" class="btn btn--map">Visa på karta</a>
+      </div>
+
+    </div>
+
+    <!-- Google Maps embed -->
+    <div class="footer__map">
+      <iframe
+        title="Inkman Studio Karta"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2129.0!2d14.1618!3d57.7826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVHLDpWfDpXJkc2dhdGFuIDIzLCBKw7Zua8O2cGluZw!5e0!3m2!1ssv!2sse!4v1"
+        width="100%"
+        height="250"
+        style="border:0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+
+    <div class="footer__bottom">
+      <p>© 2026 Inkman Studio – Trägårdsgatan 23, Jönköping</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

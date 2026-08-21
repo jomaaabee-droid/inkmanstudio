@@ -1,0 +1,736 @@
+/* ============================================
+   INKMAN STUDIO – style.css
+   Mörkt professionellt tema
+   ============================================ */
+
+/* ---------- RESET & VARIABLER ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg-dark:       #0d0d0d;
+  --bg-card:       #1a1a1a;
+  --bg-nav:        #111111;
+  --accent:        #c8a96e;      /* guld/brons */
+  --accent-hover:  #e0c080;
+  --text-light:    #f0f0f0;
+  --text-muted:    #888888;
+  --border:        #2a2a2a;
+  --sidebar-w:     220px;
+  --nav-h:         60px;
+  --font-heading:  'Oswald', sans-serif;
+  --font-body:     'Open Sans', sans-serif;
+  --radius:        6px;
+  --transition:    0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ---------- HERO VIDEO ---------- */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  min-height: 400px;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+}
+
+.hero__overlay {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: 16px;
+  text-align: center;
+  padding: 20px;
+}
+
+.hero__logo {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 3px solid var(--accent);
+  box-shadow: 0 0 30px rgba(200, 169, 110, 0.4);
+  background: rgba(0,0,0,0.5);
+}
+
+.hero__tagline {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+
+/* ---------- NAVBAR ---------- */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-nav);
+  border-bottom: 2px solid var(--accent);
+  height: var(--nav-h);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+}
+
+.navbar__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0 24px;
+  gap: 8px;
+}
+
+.navbar__item {
+  position: relative;
+}
+
+.navbar__btn {
+  background: transparent;
+  border: none;
+  color: var(--text-light);
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 8px 20px;
+  cursor: pointer;
+  transition: color var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.navbar__btn:hover,
+.navbar__btn:focus {
+  color: var(--accent);
+  outline: none;
+}
+
+.navbar__arrow {
+  font-size: 0.7rem;
+  transition: transform var(--transition);
+}
+
+.navbar__item:hover .navbar__arrow,
+.navbar__item:focus-within .navbar__arrow {
+  transform: rotate(180deg);
+}
+
+.navbar__btn--highlight {
+  background: var(--accent);
+  color: #000;
+  border-radius: var(--radius);
+  font-weight: 700;
+  padding: 8px 22px;
+  transition: background var(--transition), color var(--transition);
+}
+
+.navbar__btn--highlight:hover {
+  background: var(--accent-hover);
+  color: #000;
+}
+
+/* Dropdown */
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  top: calc(var(--nav-h) - 8px);
+  left: 0;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 2px solid var(--accent);
+  min-width: 200px;
+  z-index: 200;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.7);
+}
+
+.dropdown__menu a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 0.9rem;
+  color: var(--text-light);
+  transition: background var(--transition), color var(--transition);
+  border-bottom: 1px solid var(--border);
+}
+
+.dropdown__menu a:last-child {
+  border-bottom: none;
+}
+
+.dropdown__menu a:hover {
+  background: rgba(200, 169, 110, 0.1);
+  color: var(--accent);
+}
+
+.navbar__item:hover .dropdown__menu,
+.navbar__item:focus-within .dropdown__menu {
+  display: block;
+}
+
+/* ---------- MAIN LAYOUT ---------- */
+.main-layout {
+  display: flex;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0;
+  min-height: 80vh;
+}
+
+/* ---------- SIDEBAR ---------- */
+.sidebar {
+  width: var(--sidebar-w);
+  flex-shrink: 0;
+  background: var(--bg-card);
+  border-right: 1px solid var(--border);
+  padding: 32px 0;
+  position: sticky;
+  top: var(--nav-h);
+  height: calc(100vh - var(--nav-h));
+  overflow-y: auto;
+}
+
+.sidebar__title {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  padding: 0 24px 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 8px;
+}
+
+.sidebar__list {
+  list-style: none;
+}
+
+.sidebar__link {
+  display: block;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  transition: background var(--transition), color var(--transition), padding-left var(--transition);
+  border-left: 3px solid transparent;
+}
+
+.sidebar__link:hover,
+.sidebar__link.active {
+  background: rgba(200, 169, 110, 0.08);
+  color: var(--accent);
+  border-left-color: var(--accent);
+  padding-left: 32px;
+}
+
+/* ---------- CONTENT ---------- */
+.content {
+  flex: 1;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Center Hero – logga */
+.center-hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 40px;
+  background: radial-gradient(ellipse at center, #1c1c1c 0%, var(--bg-dark) 70%);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.center-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(200, 169, 110, 0.04) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.center-hero__img {
+  width: clamp(200px, 30vw, 380px);
+  height: auto;
+  filter: drop-shadow(0 0 40px rgba(200, 169, 110, 0.25));
+  position: relative;
+  z-index: 1;
+}
+
+/* ---------- SEKTIONER ---------- */
+.section {
+  padding: 64px 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section__title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 32px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.section__title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 2px;
+  background: var(--accent);
+}
+
+.section__body {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.section__body p {
+  margin-bottom: 16px;
+  max-width: 680px;
+}
+
+/* ---------- ÖPPETTIDER ---------- */
+.hours-table {
+  width: 100%;
+  max-width: 400px;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.hours-table td {
+  padding: 10px 16px;
+  border-bottom: 1px solid var(--border);
+  font-size: 0.95rem;
+}
+
+.hours-table td:first-child {
+  color: var(--text-muted);
+}
+
+.hours-table td:last-child {
+  color: var(--accent);
+  font-weight: 600;
+  text-align: right;
+}
+
+.hours-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+/* ---------- BOKNING ---------- */
+.booking-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.booking-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 28px;
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+
+.booking-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.4);
+}
+
+.booking-card__icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.booking-card h3 {
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.booking-card p {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+  line-height: 1.7;
+}
+
+.booking-card ul {
+  padding-left: 20px;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 2;
+}
+
+/* ---------- KNAPPAR ---------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius);
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all var(--transition);
+  margin-top: 12px;
+  border: none;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: #000;
+  font-weight: 700;
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(200, 169, 110, 0.3);
+}
+
+.btn--map {
+  background: transparent;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+}
+
+.btn--map:hover {
+  background: var(--accent);
+  color: #000;
+}
+
+.btn--instagram {
+  background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+  color: #fff;
+  font-weight: 700;
+}
+
+.btn--instagram:hover {
+  opacity: 0.9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 39, 67, 0.35);
+}
+
+/* ---------- INSTAGRAM GRID ---------- */
+#instagram {
+  background: var(--bg-dark);
+}
+
+.instagram-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 4px;
+}
+
+.instagram-grid img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: opacity var(--transition), transform var(--transition);
+  cursor: pointer;
+}
+
+.instagram-grid img:hover {
+  opacity: 0.8;
+  transform: scale(1.02);
+}
+
+.instagram-placeholder {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 48px;
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+}
+
+.instagram-placeholder p {
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  background: #0a0a0a;
+  border-top: 2px solid var(--accent);
+  padding-top: 0;
+}
+
+.footer__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 40px;
+  padding: 56px 48px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer__col {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 12px;
+  min-width: 180px;
+}
+
+.footer__label {
+  font-family: var(--font-heading);
+  font-size: 0.75rem;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+/* Instagram footer */
+.footer__ig-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  transition: transform var(--transition);
+}
+
+.footer__ig-link:hover {
+  transform: scale(1.05);
+}
+
+.footer__ig-icon {
+  width: 64px;
+  height: 64px;
+}
+
+.footer__ig-link span {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.footer__ig-handle {
+  color: var(--text-muted) !important;
+  font-size: 0.8rem !important;
+  font-weight: 400 !important;
+}
+
+/* Klarna footer */
+.footer__klarna-badge {
+  background: #ffb3c7;
+  color: #000;
+  font-size: 1.8rem;
+  font-weight: 900;
+  font-family: var(--font-heading);
+  padding: 10px 28px;
+  border-radius: 50px;
+  letter-spacing: -1px;
+  transition: transform var(--transition);
+}
+
+.footer__klarna-link:hover .footer__klarna-badge {
+  transform: scale(1.05);
+}
+
+.footer__sub {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+/* Address footer */
+.footer__logo {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+}
+
+.footer__contact a {
+  color: var(--accent);
+}
+
+.footer__contact a:hover {
+  text-decoration: underline;
+}
+
+/* Karta */
+.footer__map {
+  width: 100%;
+  border-top: 1px solid var(--border);
+  overflow: hidden;
+  opacity: 0.85;
+  transition: opacity var(--transition);
+}
+
+.footer__map:hover {
+  opacity: 1;
+}
+
+.footer__bottom {
+  text-align: center;
+  padding: 20px;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border);
+}
+
+/* ---------- SCROLLBAR ---------- */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  .main-layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px solid var(--border);
+    padding: 20px 0;
+  }
+
+  .sidebar__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    padding: 0 16px;
+  }
+
+  .sidebar__link {
+    padding: 8px 16px;
+    border-left: none;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+  }
+
+  .sidebar__link:hover,
+  .sidebar__link.active {
+    padding-left: 16px;
+    border-color: var(--accent);
+  }
+
+  .section {
+    padding: 40px 24px;
+  }
+
+  .center-hero {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    height: 55vh;
+  }
+
+  .hero__logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .hero__tagline {
+    font-size: 1rem;
+    letter-spacing: 2px;
+  }
+
+  .navbar__inner {
+    padding: 0 12px;
+    gap: 2px;
+  }
+
+  .navbar__btn {
+    padding: 8px 10px;
+    font-size: 0.8rem;
+    letter-spacing: 0.5px;
+  }
+
+  .footer__inner {
+    padding: 40px 24px;
+    gap: 32px;
+  }
+
+  .booking-info {
+    grid-template-columns: 1fr;
+  }
+}
