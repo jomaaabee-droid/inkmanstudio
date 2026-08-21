@@ -278,6 +278,35 @@ img {
   position: relative;
 }
 
+.center-hero__layout {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  max-width: 1100px;
+  width: 100%;
+  padding-left: 40px;
+}
+
+.center-hero__bio {
+  flex: 1;
+  color: var(--text-muted);
+  line-height: 1.8;
+}
+
+.center-hero__bio-title {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  color: var(--accent);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+}
+
+.center-hero__bio p {
+  margin-bottom: 1rem;
+  font-size: 0.97rem;
+}
+
 .center-hero::before {
   content: '';
   position: absolute;
@@ -762,6 +791,12 @@ img {
 
   .center-hero {
     padding: 40px 24px;
+  }
+  .center-hero__layout {
+    flex-direction: column;
+    padding-left: 0;
+    gap: 30px;
+    text-align: center;
   }
 }
 
