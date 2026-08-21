@@ -82,13 +82,9 @@ img {
 }
 
 .hero__logo {
-  width: 160px;
-  height: 160px;
+  width: 260px;
+  height: auto;
   object-fit: contain;
-  border-radius: 50%;
-  border: 3px solid var(--accent);
-  box-shadow: 0 0 30px rgba(200, 169, 110, 0.4);
-  background: rgba(0,0,0,0.5);
 }
 
 .hero__tagline {
