@@ -290,7 +290,6 @@ img {
   mix-blend-mode: lighten;
   width: clamp(200px, 30vw, 380px);
   height: auto;
-  filter: drop-shadow(0 0 40px rgba(200, 169, 110, 0.25));
   position: relative;
   z-index: 1;
 }
