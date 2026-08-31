@@ -526,8 +526,15 @@ img {
 }
 
 .instagram-placeholder p {
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   font-size: 1rem;
+}
+
+.instagram-placeholder__accounts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
 }
 
 /* ---------- FOOTER ---------- */
