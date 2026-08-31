@@ -391,6 +391,41 @@ img {
 }
 
 /* ---------- BOKNING ---------- */
+.booking-cta {
+  text-align: center;
+  margin-bottom: 40px;
+  padding: 32px;
+  background: linear-gradient(135deg, rgba(212,175,55,0.1), rgba(212,175,55,0.05));
+  border: 1px solid var(--accent);
+  border-radius: var(--radius);
+}
+
+.booking-cta p {
+  font-size: 1.1rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+}
+
+.btn--booking-cta {
+  display: inline-block;
+  padding: 16px 48px;
+  background: var(--accent);
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: var(--radius);
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
+  box-shadow: 0 4px 20px rgba(212,175,55,0.4);
+}
+
+.btn--booking-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212,175,55,0.6);
+}
+
 .booking-info {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
