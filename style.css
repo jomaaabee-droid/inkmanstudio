@@ -585,12 +585,22 @@ img {
 }
 
 /* Instagram footer */
+.footer__ig-accounts {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
 .footer__ig-link {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 8px;
   transition: transform var(--transition);
+  text-decoration: none;
 }
 
 .footer__ig-link:hover {
@@ -598,18 +608,19 @@ img {
 }
 
 .footer__ig-icon {
-  width: 64px;
-  height: 64px;
+  width: 52px;
+  height: 52px;
 }
 
 .footer__ig-link span {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 600;
+  color: var(--text-light);
 }
 
 .footer__ig-handle {
   color: var(--text-muted) !important;
-  font-size: 0.8rem !important;
+  font-size: 0.75rem !important;
   font-weight: 400 !important;
 }
 
