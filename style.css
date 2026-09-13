@@ -323,6 +323,19 @@ img {
   z-index: 1;
 }
 
+.center-hero__video {
+  width: clamp(220px, 32vw, 420px);
+  height: auto;
+  aspect-ratio: 9/16;
+  object-fit: cover;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  border: 2px solid rgba(200, 169, 110, 0.25);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.7);
+}
+
 /* ---------- SEKTIONER ---------- */
 .section {
   padding: 64px 48px;
