@@ -86,7 +86,7 @@ img {
   height: auto;
   object-fit: contain;
   mix-blend-mode: lighten;
-  opacity: 0.2;
+  opacity: 0.65;
 }
 
 .hero__tagline {
