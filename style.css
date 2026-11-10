@@ -92,6 +92,7 @@ img {
 .hero__tagline {
   font-family: var(--font-heading);
   font-size: 1.4rem;
+  font-weight: 400;
   letter-spacing: 4px;
   text-transform: uppercase;
   color: var(--accent);
@@ -232,6 +233,7 @@ img {
 .sidebar__title {
   font-family: var(--font-heading);
   font-size: 0.75rem;
+  font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--accent);
