@@ -3,7 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Inkman Studio – Tattoo Jönköping</title>
+  <title>Tatuering Jönköping – Inkman Studio</title>
+  <meta name="description" content="Tatuering i Jönköping hos Inkman Studio på Trägårdsgatan 23. Sleeve, black and grey och ryggtavla. Kostnadsfri konsultation, boka via Bokadirekt." />
+  <link rel="canonical" href="https://www.inkmanstudio.se/" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="sv_SE" />
+  <meta property="og:site_name" content="Inkman Studio" />
+  <meta property="og:title" content="Tatuering Jönköping – Inkman Studio" />
+  <meta property="og:description" content="Tatuering i Jönköping hos Inkman Studio på Trägårdsgatan 23. Sleeve, black and grey och ryggtavla. Kostnadsfri konsultation, boka via Bokadirekt." />
+  <meta property="og:url" content="https://www.inkmanstudio.se/" />
+  <meta property="og:image" content="https://www.inkmanstudio.se/assets/images/logo.jpg" />
+  <meta property="og:image:alt" content="Inkman Studio logotyp" />
+  <meta property="og:image:width" content="1320" />
+  <meta property="og:image:height" content="2235" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tatuering Jönköping – Inkman Studio" />
+  <meta name="twitter:description" content="Tatuering i Jönköping hos Inkman Studio på Trägårdsgatan 23. Sleeve, black and grey och ryggtavla. Kostnadsfri konsultation, boka via Bokadirekt." />
+  <meta name="twitter:image" content="https://www.inkmanstudio.se/assets/images/logo.jpg" />
+  <meta name="twitter:image:alt" content="Inkman Studio logotyp" />
+
+  <link rel="preload" as="image" href="assets/video/hero-poster.jpg" type="image/jpeg" fetchpriority="high" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TattooParlor",
+    "@id": "https://www.inkmanstudio.se/#studio",
+    "name": "Inkman Studio",
+    "url": "https://www.inkmanstudio.se/",
+    "image": "https://www.inkmanstudio.se/assets/images/logo.jpg",
+    "description": "Tatueringsstudio på Trägårdsgatan 23 i Jönköping. Kostnadsfri konsultation. Måndag är avsatt för konsultation. Tisdag till lördag 10:00–18:00 bokning och 18:00–21:00 drop-in. Söndag stängt. Boka via Bokadirekt.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Trägårdsgatan 23",
+      "addressLocality": "Jönköping",
+      "addressCountry": "SE"
+    },
+    "hasMap": "https://maps.google.com/?q=Tr%C3%A4g%C3%A5rdsgatan+23,+J%C3%B6nk%C3%B6ping",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "10:00",
+        "closes": "18:00",
+        "description": "Bokning"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "18:00",
+        "closes": "21:00",
+        "description": "Drop-in"
+      }
+    ],
+    "paymentAccepted": "Klarna, banköverföring, kort, Swish",
+    "sameAs": [
+      "https://www.instagram.com/ink.man.studio",
+      "https://www.bokadirekt.se/places/inkman-studio-137631"
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -13,13 +75,12 @@
 
   <!-- ========== HERO VIDEO ========== -->
   <section class="hero" id="hem">
-    <video class="hero__video" autoplay muted loop playsinline>
-      <!-- Lägg till video: assets/video/hero.mp4 -->
+    <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="assets/video/hero-poster.jpg" aria-label="Film från Inkman Studio i Jönköping där en tatuerare arbetar med en sleeve">
       <source src="assets/video/hero.mp4" type="video/mp4" />
     </video>
     <div class="hero__overlay">
-      <img src="assets/images/logo-gold.png" alt="Inkman Studio" class="hero__logo" />
-      <p class="hero__tagline">Tattoo Studio – Jönköping</p>
+      <img src="assets/images/logo-gold.png" alt="Inkman Studio logotyp" class="hero__logo" />
+      <h1 class="hero__tagline">Tatueringsstudio i Jönköping</h1>
     </div>
   </section>
 
@@ -76,7 +137,7 @@
 
     <!-- Vänster sidomeny – Tatueringsstilar -->
     <aside class="sidebar" id="tattoos">
-      <h3 class="sidebar__title">Stilar</h3>
+      <p class="sidebar__title">Stilar</p>
       <ul class="sidebar__list">
         <li><a href="#tattoos-sleeve" class="sidebar__link">Sleeve</a></li>
         <li><a href="#tattoos-halvsleeve" class="sidebar__link">Halv-Sleeve</a></li>
@@ -95,7 +156,7 @@
       <!-- Logga/maskot i centrum -->
       <section class="center-hero">
         <div class="center-hero__layout">
-          <video class="center-hero__video" autoplay muted loop playsinline>
+          <video class="center-hero__video" autoplay muted loop playsinline preload="none" poster="assets/video/hero-poster.jpg" aria-label="Film från Inkman Studio där en tatuerare arbetar med en sleeve">
             <source src="assets/video/hero.mp4" type="video/mp4" />
           </video>
           <div class="center-hero__bio">
@@ -114,27 +175,27 @@
         <p class="section__desc">En full sleeve är ett av de mest imponerande tatueringsprojekten — ett konstverk som täcker hela armen från axel till handled. Varje sleeve är unik och skräddarsydd efter kunden.</p>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="assets/images/sleeve-greek.jpg" alt="Greek Mythology Sleeve" loading="lazy" />
+            <img src="assets/images/sleeve-greek.jpg" alt="Full sleeve med grekisk mytologi, Zeus och Pegasus" loading="lazy" />
             <div class="gallery-caption">Greek Mythology – Zeus & Pegasus</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/asian-sleeve.jpg" alt="Asian Full Sleeve" loading="lazy" />
+            <img src="assets/images/asian-sleeve.jpg" alt="Asiatisk full sleeve med geisha och tiger" loading="lazy" />
             <div class="gallery-caption">Asian – Geisha & Tiger Full Sleeve</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/asian1.jpg" alt="Asian Geisha Tiger Sleeve" loading="lazy" />
+            <img src="assets/images/asian1.jpg" alt="Asiatisk full sleeve med geisha och tiger" loading="lazy" />
             <div class="gallery-caption">Asian – Geisha & Tiger Full Sleeve</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/black-grey-2.jpg" alt="Black Grey Klocka Rosor Sleeve" loading="lazy" />
+            <img src="assets/images/black-grey-2.jpg" alt="Full sleeve i black and grey med klocka och rosor" loading="lazy" />
             <div class="gallery-caption">Full Sleeve – Klocka & Rosor</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/asian2.jpg" alt="Asian Sleeve" loading="lazy" />
+            <img src="assets/images/asian2.jpg" alt="Mörk asiatisk full sleeve" loading="lazy" />
             <div class="gallery-caption">Asian – Dark Full Sleeve</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/asian3.jpg" alt="Asian Style Sleeve" loading="lazy" />
+            <img src="assets/images/asian3.jpg" alt="Full sleeve i asiatisk stil" loading="lazy" />
             <div class="gallery-caption">Asian Style – Full Sleeve</div>
           </div>
         </div>
@@ -146,11 +207,11 @@
         <p class="section__desc">En halv sleeve täcker antingen över- eller underarmen och ger en kraftfull look med mer flexibilitet. Perfekt för dig som vill ha ett stort sammanhängande verk utan att täcka hela armen.</p>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="assets/images/halv-sleeve.jpg" alt="Halv Sleeve" loading="lazy" />
+            <img src="assets/images/halv-sleeve.jpg" alt="Halv sleeve i black and grey" loading="lazy" />
             <div class="gallery-caption">Sleeve – Black & Grey</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/black-grey-1.jpg" alt="Black and Grey Halv Sleeve" loading="lazy" />
+            <img src="assets/images/black-grey-1.jpg" alt="Sleeve i black and grey med rosor och familjemotiv" loading="lazy" />
             <div class="gallery-caption">Sleeve – Rosor & Family</div>
           </div>
         </div>
@@ -162,11 +223,11 @@
         <p class="section__desc">Ben sleeves är ett allt mer populärt val — ett storformat konstverk längs benet som ger samma dramatiska effekt som en arm sleeve. Vi specialiserar oss på kompletta ben-projekt.</p>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="assets/images/ben-sleeve.jpg" alt="Ben Sleeve" loading="lazy" />
+            <img src="assets/images/ben-sleeve.jpg" alt="Ben sleeve i full design längs benet" loading="lazy" />
             <div class="gallery-caption">Ben Sleeve – Full Design</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/halv-sleeve-ben.jpg" alt="Halv Ben Sleeve" loading="lazy" />
+            <img src="assets/images/halv-sleeve-ben.jpg" alt="Halv ben-sleeve i black and grey" loading="lazy" />
             <div class="gallery-caption">Halv Ben-Sleeve – Black & Grey</div>
           </div>
         </div>
@@ -178,7 +239,7 @@
         <p class="section__desc">Ryggen erbjuder den största arbetsytan på kroppen. En ryggtavla är ett monumentalt konstverk som kräver precision, tålamod och skicklighet — något vi på Inkman Studio är kända för.</p>
         <div class="gallery-grid gallery-grid--wide">
           <div class="gallery-item">
-            <img src="assets/images/rygg-tavla.jpg" alt="Ryggtavla Lejon" loading="lazy" />
+            <img src="assets/images/rygg-tavla.jpg" alt="Ryggtavla med lejon, krona och mandala" loading="lazy" />
             <div class="gallery-caption">Ryggtavla – Lejon med Krona & Mandala</div>
           </div>
         </div>
@@ -190,19 +251,19 @@
         <p class="section__desc">Black & Grey är en tidlös stil som bygger på djupa kontraster, mjuka graderingar och detaljrikedom. Resultatet är tatueringar med ett fotografiskt djup som åldras vackert.</p>
         <div class="gallery-grid">
           <div class="gallery-item">
-            <img src="assets/images/djur.jpg" alt="Varg Black Grey" loading="lazy" />
+            <img src="assets/images/djur.jpg" alt="Varg tatuerad i black and grey-realism" loading="lazy" />
             <div class="gallery-caption">Varg – Black & Grey Realism</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/chikana.jpg" alt="Chikana Style" loading="lazy" />
+            <img src="assets/images/chikana.jpg" alt="Chicano-tatuering med kvinna och körsbärsblommor" loading="lazy" />
             <div class="gallery-caption">Chicano – Kvinna & Körsbärsblommor</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/liten-black-grey.jpg" alt="Liten Black Grey" loading="lazy" />
+            <img src="assets/images/liten-black-grey.jpg" alt="Liten black and grey-tatuering med lotus och mandala" loading="lazy" />
             <div class="gallery-caption">Black & Grey – Lotus Mandala</div>
           </div>
           <div class="gallery-item">
-            <img src="assets/images/djur-tema.jpg" alt="Djur Tema" loading="lazy" />
+            <img src="assets/images/djur-tema.jpg" alt="Djurmotiv med elefant och mandala" loading="lazy" />
             <div class="gallery-caption">Djur Tema – Elefant & Mandala</div>
           </div>
         </div>
@@ -418,7 +479,7 @@
 
       <!-- Adress + Karta -->
       <div class="footer__col footer__col--address">
-        <img src="assets/images/logo.jpg" alt="Inkman Studio" class="footer__logo" />
+        <img src="assets/images/logo.jpg" alt="Inkman Studio logotyp" class="footer__logo" loading="lazy" />
         <div class="footer__contact">
           <p>📍 Trägårdsgatan 23, Jönköping</p>
           <p>📸 <a href="https://www.instagram.com/ink.man.studio" target="_blank">@ink.man.studio</a></p>
